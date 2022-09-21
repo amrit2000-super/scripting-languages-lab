@@ -9,7 +9,7 @@ def celsius_to_farhenheit(cel):
 
 def farhenheit_to_celsius(far):
     cel = 5/9*(far-32)
-    print("the temperature in farhenheit is", far)
+    print("the temperature in celsius is", cel)
     tpl[far]=cel
 
 def celsius_to_kelvin(cel):
@@ -19,7 +19,7 @@ def celsius_to_kelvin(cel):
 
 def kelvin_to_celsius(kel):
     cel = kel-273
-    print("the temperature in farhenheit is", cel)
+    print("the temperature in celsius is", cel)
     tpl[kel]=cel
 
 def farhenheit_to_kelvin(far):
