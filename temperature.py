@@ -61,7 +61,7 @@ while True:
         farhenheit_to_kelvin(far)
         print(tpl)
     elif (choice==6):
-        kel = int(input("enter the temperature in farhenheit:\n"))
+        kel = int(input("enter the temperature in kelvin:\n"))
         kelvin_to_farhenheit(kel)
         print(tpl)
     else:
