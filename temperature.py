@@ -38,7 +38,7 @@ while True:
     print("3:celsius to kelvin")
     print("4:kelvin to celsius")
     print("5:farhenheit to kelvin")
-    print("5:kelvin to farhenheit")
+    print("6:kelvin to farhenheit")
     choice = int(input("enter the choice:\n"))
     if (choice == 1):
         cel = int(input("enter the temperature in celsius:\n"))
