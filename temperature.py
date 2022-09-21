@@ -57,7 +57,7 @@ while True:
         kelvin_to_celsius(kel)
         print(tpl)
     elif (choice==5):
-        kel = int(input("enter the temperature in farhenheit:\n"))
+        far = int(input("enter the temperature in farhenheit:\n"))
         farhenheit_to_kelvin(far)
         print(tpl)
     elif (choice==6):
