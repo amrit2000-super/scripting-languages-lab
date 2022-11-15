@@ -1,0 +1,49 @@
+<!--The function Change String(str) needs to modify the string passed using the
+following rules:
+• Replace every letter in the string with the letter that follows it in alphabetical order (ie.
+Z becomes a, l becomes m).
+• Take every vowel in this new string (a, e, i, o, u) and Capitalize it.
+• Return this modified string.--> 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change String</title>
+</head>
+<body>
+    <p>enter the string:<input type="text" id="string"></p>
+    <button onclick="changeString()" value="Submit">Submit</button>
+    <p>The input string is :<p id="inputString"></p>
+    <p>The output string is :<p id="result"></p>
+    <script>
+        function changeString() {
+            string=document.getElementById("string").value
+            string1=string.split('')
+            for(i=0;i<string1.length;i++) {
+                switch(string1[i]){
+                    case "":break;
+                    case 'z':string1[i]='a'; break;
+                    case 'Z':string1[i]='A'; break;
+                    default:string1[i]=String.fromCharCode(1+string1[i].charCodeAt());
+                }
+                switch(string1[i]) {
+                    case 'a':
+                    case 'e':
+                    case 'i':
+                    case 'o':
+                    case 'u':string1[i]=string1[i].toUpperCase();
+                    break;
+                }
+            }
+            string1=string1.join('')
+            document.getElementById("inputString").innerHTML=string
+            document.getElementById("result").innerHTML=string1
+        }
+    </script>
+</body>
+</html>
