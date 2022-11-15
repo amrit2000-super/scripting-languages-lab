@@ -1,0 +1,43 @@
+<!--The function LetterSurround(str) needs to find out if the string passed is an
+acceptable sequence by either returning true or false. The string parameter will be composed
+of + and = symbols with several characters between them. For the string to be true each letter
+must be surrounded by + symbol. Test Cases: The string will not be empty and will have at
+least one letter-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetterSurround</title>
+</head>
+<body>
+    <p>Enter the string<input type="text" id="inputString"></p>
+    <p>the input String is:<p id="text"></p></p>
+    <p>the result is:<p id="res"></p></p>
+    <button onclick="onSubmit()" value="Submit">Submit</button>
+
+    <script>
+       function onSubmit() {
+        s=document.getElementById("inputString").value;
+        if(s[0]>='a' || s[s.length-1]>='a') {
+            res=false;
+        }
+        else{
+            for(i=0;i<s.length-1;i++) {
+                 if(s[i]>'a') {
+                    if(s[i-1]!='+' || s[i+1]!='+') {
+                        res=false;
+                    }
+                 }
+                res= true;
+            }
+        }
+        document.getElementById("text").innerHTML=s;
+        document.getElementById("res").innerHTML=res;
+       }
+        
+    </script>
+</body>
+</html>
