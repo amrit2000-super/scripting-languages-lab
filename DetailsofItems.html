@@ -1,0 +1,53 @@
+!--The function LetterSurround(str) needs to find out if the string passed is an
+acceptable sequence by either returning true or false. The string parameter will be composed
+of + and = symbols with several characters between them. For the string to be true each letter
+must be surrounded by + symbol. Test Cases: The string will not be empty and will have at
+least one letter-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>letterSurround</title>
+</head>
+<body>
+    <p>enter the item to be purchased:<input type="text" id="inputItem"></p>
+    <p>enter the item price:<input type="text" id="itemPrice"></p>
+    <p>select the no of item:<input type="number" id="itemNumber" min="0"></p>
+    <button onclick="onSubmit()" value="submit">Submit</button>
+    <button onclick="onPaid()" value="paid">Paid</button>
+
+    <script>
+        function onSubmit() {
+            itemInput=document.getElementById("inputItem")
+            itemPrice=document.getElementById("inputPrice")
+            itemNumber=document.getElementById("itemNumber")
+            
+            if(itemInput.value.isEmpty || itemPrice.value<0 || itemNumber.value<0) {
+                alert("Pls fill the deatils correctly");
+            }
+            else
+            {
+                alert("you have purchased",itemInput.value,"its price is,"+itemPrice.value ,"and quantity you have purchased is",itemNumber.value,"the total price is",itemNumber.value*itemPrice.value);
+            }
+        }
+
+        function onPaid() {
+            itemInput=document.getElementById("inputItem");
+            itemPrice=document.getElementById("inputPrice");
+            itemNumber=document.getElementById("itemNumber");
+            
+            if(itemInput.value.isEmpty || itemPrice.value<0 || itemNumber.value<0) {
+                alert("Pls fill the deatils correctly");
+            }
+            else
+            {
+                 alert("status:Paid");
+            }
+        }
+    </script>
+
+</body>
+</html>
